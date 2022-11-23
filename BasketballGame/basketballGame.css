@@ -1,0 +1,51 @@
+body{
+    background-color: #d5f4e6;
+    overflow: hidden;
+}
+
+*{
+   box-sizing: border-box; 
+}
+
+#basketContainer{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 33vh;
+    width: auto;
+
+}
+
+#basketImage{
+    height: 100%;
+    width: auto;
+}
+
+.courtContainer{
+    width: auto;
+    height: 62vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+#courtPic{
+    width: auto;
+    height: 50%;
+}
+
+#gameBallContainer {
+    position: absolute;
+    height: auto;
+    width: 20vh;;
+    bottom: 7vh;
+    left: 45vw;
+}
+
+#basketball{
+    width: auto;
+    height: 20vh;
+}
