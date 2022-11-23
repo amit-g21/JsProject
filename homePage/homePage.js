@@ -5,7 +5,6 @@ let homeBtn = document.querySelector('#logInBtn')
 homeBtn.addEventListener('click' , checkDetalis)
 
 
-
 function checkDetalis(){
     let reco =  JSON.parse(localStorage.getItem(userNameLog.value));
     console.log(reco)

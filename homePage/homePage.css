@@ -4,7 +4,7 @@ body{
     
 }
 
-.formContainer{
+.formContainer {
     display: flex;;
     justify-content: center;
     flex-direction: column;
@@ -21,19 +21,20 @@ form{
     gap: 3vh;
     box-sizing: content-box;
     width: 30%;
-    margin: auto ;
+    /* margin: auto ; */
     padding-bottom: 2%;
 }
 
 
 .inputs{
     display: flex;
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 68%;
     border-radius: 10px;
+    height: 4vh;
 }
 
-#logInBtn{
+#logInBtn, #signUpBtn{
     width: 68%;
     font-size: 1.5rem;
     border-radius: 10px;
@@ -42,14 +43,35 @@ form{
 }
 
 #homePageLogo{
-    width: 40rem;
-    height: 30rem;
+    width: 100%;
+    height: auto;
 }
 
 .logoContainer{
+    width: 30vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    margin-bottom: 1.5vh;
 }
 
+#signUpLogoContainer{
+    width: 20vh;
+}
 
+.forBtn{
+    background-color: #618685;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a:visited{
+    color: blue;
+}
+
+p, a{
+    font-size: large;
+}
