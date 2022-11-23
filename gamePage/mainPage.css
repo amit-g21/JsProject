@@ -1,0 +1,56 @@
+body{
+    background-color: #d5f4e6;
+}
+
+body > h1 {
+    text-align: center;
+}
+.upGames{
+    display: flex;
+    flex-direction: row;
+    height: 26.7rem;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+
+.buttomGames{
+    display: flex;
+    flex-direction: row;
+    height: 26.7rem;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+
+.games{
+    width: 30vw;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100%;
+}
+
+.gameOne{
+    background-image: url("../images/basketballGame.jpg");
+}
+
+.gameTwo{
+    background-image: url("../images/pokerGame.webp");
+}
+
+.gameThird{
+    background-image: url("../images/dominogame.jpg");
+}
+
+.gameFour{
+    background-image: url("../images/findTreasuregame.webp");
+}
+
+
+a:hover{
+    opacity: 0.5;
+}
