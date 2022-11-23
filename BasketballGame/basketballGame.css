@@ -14,6 +14,8 @@ body{
     align-content: center;
     height: 33vh;
     width: auto;
+    position: absolute;
+    left: 37vw;
 
 }
 
@@ -24,7 +26,7 @@ body{
 
 .courtContainer{
     width: auto;
-    height: 62vh;
+    height: 2vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -34,7 +36,10 @@ body{
 
 #courtPic{
     width: auto;
-    height: 50%;
+    height: 30%;
+    position: absolute;
+    bottom: 0px;
+    z-index: -1;
 }
 
 #gameBallContainer {
