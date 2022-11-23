@@ -19,9 +19,17 @@ body{
 
 }
 
-#basketImage{
+/* #basketImage{
     height: 100%;
     width: auto;
+} */
+
+
+#net{
+    position: absolute;
+    height:auto;
+    width: 100%;
+    z-index: 3;
 }
 
 .courtContainer{
@@ -48,9 +56,19 @@ body{
     width: 20vh;;
     bottom: 7vh;
     left: 45vw;
+    z-index: 4;
 }
 
 #basketball{
     width: auto;
     height: 20vh;
+}
+
+p{
+    position: absolute;
+    z-index: 50;
+    top: 13vh;
+    left: 2.5vh;
+    font-size: 2rem;
+    font-weight: bold;
 }

@@ -2,37 +2,65 @@ let ballContainer = document.querySelector('#gameBallContainer');
 let basket = document.querySelector('#basketContainer');
 let num = window.innerWidth / 2.7;
 let width = window.innerWidth - 600;
+let middle = basket.style.left;
+let topTouchBall = window.innerHeight
 let direction = 'right';
 let move = 'up'
-let touch = 0
+let touchLeft = 0
 let numBottom = 90
 let animationId;
+let ball = document.querySelector('#basketball');
+let general = window.innerWidth / 7;
+ball.style.height = general;
+
+let centersmall = window.innerWidth / 2 - 50;
+let centerright = window.innerWidth / 2 + 70;
+
+console.log(centersmall)
+
+
+let score = 0;
+
+
+((parseInt(basket.style.left) + 293) >= centersmall )
+
 
 ballContainer.addEventListener('click' , shoot)
 
-
-
-
 function shoot(){
     requestAnimationFrame(shoot)
-    if(move == 'down' && numBottom <= 620){
+    if(move == 'down' && numBottom <= 700){
         cancelAnimationFrame(animationId);
         return;
     }
-    if(numBottom >= 1000){
+
+    if(move == 'down' && numBottom <= 850 && ((parseInt(basket.style.left) + 293) >= centersmall) && ((parseInt(basket.style.left) + 293) <= centerright))
+    {
+        console.log('homo')
+        return;
+    }
+
+
+    if(numBottom >= topTouchBall + 150){
         move ='down';
+        ballContainer.style.zIndex = "1"
+        // if(parseInt(ballContainer.style.bottom) >= 1300 ){
+        //    alert('homo')
+        // }
     }
-    if(numBottom <= 620){
-        move = 'up'
-    }
+    // if(numBottom <= 620){
+    //     move = 'up'
+    // }
     if(move === 'up'){
-    numBottom += 5;
+    numBottom += 12;
+    ballContainer.style.height = -1
     }else{
-    numBottom -= 5;
+    numBottom -= 12;
     
-    
-}
-ballContainer.style.bottom = numBottom + 'px';
+    }
+    ballContainer.style.bottom = numBottom + 'px';
+    general -= 1.3;
+    ball.style.height = general + 'px';
 }
 
 
@@ -44,7 +72,7 @@ function moveBasket(){
     if(num >= width){
         direction = 'left';
     }
-    if(num <= touch){
+    if(num <= touchLeft){
         direction = 'right'
     }
     if(direction === 'right'){
