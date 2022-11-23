@@ -13,8 +13,8 @@ let ball = document.querySelector('#basketball');
 let general = window.innerWidth / 7;
 ball.style.height = general;
 
-let centersmall = window.innerWidth / 2 - 50;
-let centerright = window.innerWidth / 2 + 70;
+let centersmall = window.innerWidth / 2 - 100;
+let centerright = window.innerWidth / 2 + 100;
 
 console.log(centersmall)
 
