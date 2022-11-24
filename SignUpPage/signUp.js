@@ -16,6 +16,12 @@ function push(){
         email : email.value,
         number : number.value
     }
+    for (key in userObj) {
+        if(userObj[key] == ''){
+            return;
+        }
+
+    }
     let detalis = [];
     detalis.push(userObj);
     localStorage.setItem(userName.value , JSON.stringify(detalis));
@@ -29,4 +35,4 @@ function push(){
 }
 
 
-btn.addEventListener('click' , push);
+btn.addEventListener('submit' , push);
