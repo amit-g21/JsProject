@@ -11,12 +11,14 @@ let move = 'up'
 let touchLeft = 0
 let numBottom = 7
 let general = window.innerWidth / 7;
-let centersmall = window.innerWidth / 2 - 140;
+let centersmall = window.innerWidth / 2 - 180;
 let centerright = window.innerWidth / 2 + 60;
 ball.style.height = general;
 let score = 0;
-let points = 0
-scoreHtml.innerText = `Score:${score}`
+let points = 0;
+let life = 3;
+let audio = new Audio('../images/swooshAud.mp3')
+scoreHtml.innerText = `Score:${score}`;
 
 setInterval(moveBasket , 10)
 
@@ -35,6 +37,10 @@ function moveBasket(){
     basket.style.left = num + 'px';
     
 };
+
+function wasBasket(){
+
+}
 
 function resetBall() {
     ballContainer.style.width = 20 + 'vh';
@@ -74,6 +80,7 @@ function BallDirectionAndSize(){
 
 function shootBall(){
     if(move == 'down' && numBottom <= 850 && (((parseInt(basket.style.left) + 293) >= centersmall) && ((parseInt(basket.style.left) + 293) <= centerright))){
+        audio.play();
         points = 1;
     }
     else{

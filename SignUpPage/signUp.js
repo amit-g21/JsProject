@@ -35,4 +35,4 @@ function push(){
 }
 
 
-btn.addEventListener('submit' , push);
+btn.addEventListener('click' , push);
