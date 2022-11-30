@@ -3,7 +3,7 @@ let basket = document.querySelector('#basketContainer');
 let ball = document.querySelector('#basketball');
 let scoreHtml = document.querySelector('p');
 let num = window.innerWidth / 2.7;
-let width = window.innerWidth - 500;
+let width = window.innerWidth - 600;
 let middle = basket.style.left;
 let topTouchBall = window.innerHeight
 let direction = 'right';
@@ -17,6 +17,7 @@ ball.style.height = general;
 let score = 0;
 let points = 0;
 let life = 3;
+let degree = 0;
 let audio = new Audio('../images/swooshAud.mp3')
 scoreHtml.innerText = `Score:${score}`;
 
@@ -93,6 +94,10 @@ function shootBall(){
         scoreHtml.innerText = `Score:${score}`;
         return;
     }
+
+    degree += 2.5;
+    ball.style.transform = `rotate(${degree}deg)`
+
 
     BallDirectionAndSize();
     requestAnimationFrame(shootBall);
