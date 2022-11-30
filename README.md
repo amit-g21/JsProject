@@ -1,2 +1,2 @@
 # JsProject
- https://amit-g21.github.io/JsProject/homePage/homePge.html
+ https://amit-g21.github.io/JsProject/homePage/homePage.html
